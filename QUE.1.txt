@@ -1,0 +1,74 @@
+//SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+contract teststudent{
+    struct student{
+        uint roll_no;
+        string name;
+        string class;
+    }
+
+    student s1;
+    student s2;
+    student s3;
+    student s4;
+    student s5;
+
+    // constructor(uint roll_no,string memory name,string memory class){
+    //     s1.roll_no=roll_no;
+    //     s1.name=name;
+    //     s1.class=class;
+    // }
+
+    function setData1(uint roll_no,string memory name,string memory class)public {
+        s1.roll_no=roll_no;
+        s1.name=name;
+        s1.class=class;
+    }
+
+    function setData2(uint roll_no,string memory name,string memory class)public {
+        s2.roll_no=roll_no;
+        s2.name=name;
+        s2.class=class;
+    }
+
+    function setData3(uint roll_no,string memory name,string memory class)public {
+        s3.roll_no=roll_no;
+        s3.name=name;
+        s3.class=class;  
+    }
+
+    function setData4(uint roll_no,string memory name,string memory class)public {
+        s4.roll_no=roll_no;
+        s4.name=name;
+        s4.class=class;
+    }
+
+    function setData5(uint roll_no,string memory name,string memory class)public {
+        s5.roll_no=roll_no;
+        s5.name=name;
+        s5.class=class;  
+    }
+
+    function getName(uint roll_no) public view returns(string memory){
+        if(roll_no==s1.roll_no){
+            return s1.name;
+        }
+        else if(roll_no==s2.roll_no){
+            return s2.name;
+        }
+        else if(roll_no==s3.roll_no){
+            return s3.name;
+        }
+        else if(roll_no==s4.roll_no){
+            return s4.name;
+        }
+        else if(roll_no==s5.roll_no){
+            return s5.name;
+        }
+        else{
+            return "No Roll number found";
+        }
+    }
+}
